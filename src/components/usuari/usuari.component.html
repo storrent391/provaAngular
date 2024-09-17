@@ -1,0 +1,52 @@
+<h1>Registre Usuari</h1>
+
+<label for="">
+    Usuari:
+    <input type="text" [(ngModel)]='this.nom'/>
+</label>
+<label for="">
+    Email:
+    <input type="email"[(ngModel)]='this.email' />
+</label>
+<label for="">
+    Password:
+    <input type="password"[(ngModel)]='this.password' />
+</label>
+<label for="">
+    Repeat Password:
+    <input type="password"[(ngModel)]='this.repeatpassword' />
+</label>
+<label for="">
+    Idioma:
+    <select [(ngModel)]="this.idioma">
+        <option value="cat">Català</option>
+        <option value="es">Espanyol</option>
+        <option value="fr">Frances</option>
+        <option value="en">Angles</option>
+        <option value="it">Italia</option>
+    </select>
+</label>
+<label for="">
+    Gender:
+    <div>
+        <label>
+            <input type="radio" name="gender" value="male" [(ngModel)]="this.gender" /> Male
+        </label>
+        <label>
+            <input type="radio" name="gender" value="female" [(ngModel)]="this.gender" /> Female
+        </label>
+        <label>
+            <input type="radio" name="gender" value="other" [(ngModel)]="this.gender" /> Other
+        </label>
+        <label>
+            <input type="radio" name="gender" value="preferNotToSay" [(ngModel)]="this.gender" /> Prefer not to say
+        </label>
+    </div>
+</label>
+<label for="">
+    <label for="terms">
+        <input type="checkbox" [(ngModel)]="this.acceptTerms" /> Accept Terms and Conditions
+    </label>
+    
+</label>
+<button (click)="submit()"> Enviar</button>
