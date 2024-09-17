@@ -19,11 +19,7 @@
 <label for="">
     Idioma:
     <select [(ngModel)]="this.idioma">
-        <option value="cat">Català</option>
-        <option value="es">Espanyol</option>
-        <option value="fr">Frances</option>
-        <option value="en">Angles</option>
-        <option value="it">Italia</option>
+        <option *ngFor=" let idioma of idiomes" [value]="idioma.value">{{idioma.label}}</option>
     </select>
 </label>
 <label for="">
